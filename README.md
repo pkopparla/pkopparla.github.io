@@ -13,4 +13,4 @@ I'm currently CSH fellow at the Center for Space and Habitability at the Univers
 
 [Notebook](grid_walkthrough.html) A walkthrough to understand the extraction of regular gridded atmospheric data from spacecraft images of Venus, including pointing correction from limb fitting.
 
-Last update 6/Sep/2021.
+Last update 6 Sep 2021.
