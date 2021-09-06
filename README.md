@@ -11,7 +11,7 @@ I'm currently CSH fellow at the Center for Space and Habitability at the Univers
 
 <h3> Projects / Code </h3>
 
-[Notebook](grid_walkthrough.html) A walkthrough to understand the extraction of regular gridded atmospheric data from spacecraft images of Venus, including pointing correction from limb fitting. In computer vision terms, this is image registration with homography matrices.
+[Notebook](grid_walkthrough.html) A walkthrough to understand the extraction of regular gridded atmospheric data from spacecraft images of Venus, including pointing correction from limb fitting.
 
 Last update 6 Sep 2021.
 
