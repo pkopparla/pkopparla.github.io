@@ -13,7 +13,9 @@ I'm currently CSH fellow at the Center for Space and Habitability at the Univers
 
 [Notebook](grid_walkthrough.html) A walkthrough to understand the extraction of regular gridded atmospheric data from spacecraft images of Venus, including pointing correction from limb fitting.
 
-Last update 6 Sep 2021.
+[Repo](https://github.com/pkopparla/ContainerizeSatimagePreview) A Dockerized pipeline that creates a scaled, color corrected JPEG preview for RGB bands from a given Landsat scene.
+
+Last update 13 Sep 2021.
 
 <center> <h4> <a href="https://github.com/pkopparla">Github</a> | <a href="https://www.linkedin.com/in/pushkar-kopparla/">LinkedIn</a> | <a href="https://scholar.google.ch/citations?user=GBJAvlYAAAAJ&hl=en">Scholar</a></h4>
 </center>
