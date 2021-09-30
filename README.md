@@ -16,7 +16,8 @@ I'm currently CSH fellow at the Center for Space and Habitability at the Univers
 [Repo](https://github.com/pkopparla/ContainerizeSatimagePreview) A Dockerized pipeline that creates a scaled, color corrected JPEG preview for RGB bands from a given Landsat scene. Also has notes on creating and testing AWS Lambda functions from custom Docker images.
 
 [Video](https://www.youtube.com/watch?v=PmFKRFUXppE) A talk on understanding long period variability in Venus clouds. Given at the Venus Science Conference by PRL on 23 Sep 2021.
-Last update 23 Sep 2021.
+
+Last update 30 Sep 2021.
 
 <center> <h4> <a href="https://github.com/pkopparla">Github</a> | <a href="https://www.linkedin.com/in/pushkar-kopparla/">LinkedIn</a> | <a href="https://scholar.google.ch/citations?user=GBJAvlYAAAAJ&hl=en">Scholar</a></h4>
 </center>
