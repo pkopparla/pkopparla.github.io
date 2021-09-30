@@ -7,7 +7,7 @@
 
 I am a [planetary scientist](https://www.ucl.ac.uk/mssl/research/solar-system/planetary-science/what-planetary-science) interested in planetary atmospheres and climates.
 
-I'm currently CSH fellow at the Center for Space and Habitability at the University of Bern. I work on understanding climate variability on exoplanets. Previously, I was working on understanding climate variability on Venus using remote sensing data from the Venus Climate Orbiter mission, Akatsuki at the University of Tokyo.
+I'm currently CSH fellow at the Center for Space and Habitability at the University of Bern. I work on understanding climate variability on exoplanets. Previously, I was working on understanding climate variability on Venus using remote sensing data from the Venus Climate Orbiter mission, Akatsuki at the University of Tokyo. Recently I've been looking into Earth observing and the tech around it.
 
 <h3> Projects / Code </h3>
 
