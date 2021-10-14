@@ -17,7 +17,7 @@ I'm currently CSH fellow at the Center for Space and Habitability at the Univers
 
 [Video](https://www.youtube.com/watch?v=PmFKRFUXppE) A talk on understanding long period variability in Venus clouds. Given at the Venus Science Conference by PRL on 23 Sep 2021.
 
-[Map](https://www.livehistoryindia.com/story/amazing-india/aihole-inscription/) A map of the historical Chalukya kingdom, made with QGIS using OpenStreetMap and Wikipedia data.
+[Map](https://www.livehistoryindia.com/story/amazing-india/aihole-inscription/) A map of the historical Chalukya kingdom, made with QGIS using OpenStreetMap and Wikipedia data. The map is the fourth figure in the linked article.
 
 Last update 14 Oct 2021.
 
