@@ -17,7 +17,9 @@ I'm currently CSH fellow at the Center for Space and Habitability at the Univers
 
 [Video](https://www.youtube.com/watch?v=PmFKRFUXppE) A talk on understanding long period variability in Venus clouds. Given at the Venus Science Conference by PRL on 23 Sep 2021.
 
-Last update 30 Sep 2021.
+[Map](https://www.livehistoryindia.com/story/amazing-india/aihole-inscription/) A map of the historical Chalukya kingdom, made with QGIS using OpenStreetMap and Wikipedia data.
+
+Last update 14 Oct 2021.
 
 <center> <h4> <a href="https://github.com/pkopparla">Github</a> | <a href="https://www.linkedin.com/in/pushkar-kopparla/">LinkedIn</a> | <a href="https://scholar.google.ch/citations?user=GBJAvlYAAAAJ&hl=en">Scholar</a></h4>
 </center>
