@@ -13,7 +13,7 @@ Here is a short [CV](PushkarKopparla.pdf)
 
 <h3> Work Samples </h3>
 
-[Notebook](grid_walkthrough.html) A walkthrough to understand the extraction of regular gridded atmospheric data from spacecraft images of Venus, including pointing correction from limb fitting in a Jupyter notebook.
+[Notebook](https://github.com/pkopparla/Venus-image-processing) An implementation of the image processing procedure to convert satellite observations of Venus by the JAXA mission Akatsuki into gridded datasets.
 
 [Repo](https://github.com/pkopparla/ContainerizeSatimagePreview) A Dockerized Python pipeline that creates a scaled, color corrected JPEG preview for RGB bands from a given Landsat scene. Also has notes on creating and testing AWS Lambda functions from custom Docker images.
 
@@ -21,7 +21,7 @@ Here is a short [CV](PushkarKopparla.pdf)
 
 [Map](https://www.livehistoryindia.com/story/amazing-india/aihole-inscription/) A map of the historical Chalukya kingdom, made with QGIS using OpenStreetMap and Wikipedia data. The map is the fourth figure in the linked article.
 
-Last update 19 Aug 2022.
+Last update 11 Sep 2022.
 
 <center> <h4> <a href="https://github.com/pkopparla">Github</a> | <a href="https://www.linkedin.com/in/pushkar-kopparla/">LinkedIn</a> | <a href="https://scholar.google.ch/citations?user=GBJAvlYAAAAJ&hl=en">Scholar</a></h4>
 </center>
