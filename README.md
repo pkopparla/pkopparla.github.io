@@ -5,9 +5,11 @@
 
 <h3> About </h3>
 
-I am a [planetary scientist](https://www.ucl.ac.uk/mssl/research/solar-system/planetary-science/what-planetary-science) interested in planetary atmospheres and climates.
+I am a remote sensing and atmospheric scientist, currently working for [Solafune Inc.](https://solafune.com/en) as lead researcher. 
 
-I'm currently CSH fellow at the Center for Space and Habitability at the University of Bern. I work on understanding climate variability on exoplanets. Previously, I was working on understanding climate variability on Venus using remote sensing data from the Venus Climate Orbiter mission, Akatsuki at the University of Tokyo. Recently I've been looking into Earth observing and the tech around it.
+
+Previously, I was a [planetary scientist](https://www.ucl.ac.uk/mssl/research/solar-system/planetary-science/what-planetary-science) interested in planetary atmospheres and climates.
+I was CSH fellow at the Center for Space and Habitability at the University of Bern where I worked on understanding climate variability on exoplanets. Before that, I was working on understanding climate variability on Venus using remote sensing data from the Venus Climate Orbiter mission, Akatsuki at the University of Tokyo. 
 
 Here is a short [CV](PushkarKopparla_Resume.pdf)
 
@@ -21,7 +23,7 @@ Here is a short [CV](PushkarKopparla_Resume.pdf)
 
 [Map](https://www.livehistoryindia.com/story/amazing-india/aihole-inscription/) A map of the historical Chalukya kingdom, made with QGIS using OpenStreetMap and Wikipedia data. The map is the fourth figure in the linked article.
 
-Last update 28 Oct 2022.
+Last update 22 Aug 2022.
 
 <center> <h4> <a href="https://github.com/pkopparla">Github</a> | <a href="https://www.linkedin.com/in/pushkar-kopparla/">LinkedIn</a> | <a href="https://scholar.google.ch/citations?user=GBJAvlYAAAAJ&hl=en">Scholar</a></h4>
 </center>
