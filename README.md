@@ -23,7 +23,7 @@ Here is a short [CV](PushkarKopparla_Resume.pdf)
 
 [Map](https://www.livehistoryindia.com/story/amazing-india/aihole-inscription/) A map of the historical Chalukya kingdom, made with QGIS using OpenStreetMap and Wikipedia data. The map is the fourth figure in the linked article.
 
-Last update 22 Aug 2023.
+Last update 21 Jun 2025.
 
 <center> <h4> <a href="https://github.com/pkopparla">Github</a> | <a href="https://www.linkedin.com/in/pushkar-kopparla/">LinkedIn</a> | <a href="https://scholar.google.ch/citations?user=GBJAvlYAAAAJ&hl=en">Scholar</a></h4>
 </center>
