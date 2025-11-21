@@ -15,6 +15,8 @@ Here is a short [CV](PushkarKopparla_Resume.pdf)
 
 <h3> Work Samples </h3>
 
+[Blog Post](https://company.solafune.com/blog/building-country) A write-up and code for building country scale cloud-free basemaps without needing a powerful machine with a big memory.
+
 [Notebook](https://github.com/pkopparla/Venus-image-processing) An implementation of the image processing procedure to convert satellite observations of Venus by the JAXA mission Akatsuki into gridded datasets.
 
 [Repo](https://github.com/pkopparla/ContainerizeSatimagePreview) A Dockerized Python pipeline that creates a scaled, color corrected JPEG preview for RGB bands from a given Landsat scene. Also has notes on creating and testing AWS Lambda functions from custom Docker images.
@@ -27,3 +29,4 @@ Last update 21 Jun 2025.
 
 <center> <h4> <a href="https://github.com/pkopparla">Github</a> | <a href="https://www.linkedin.com/in/pushkar-kopparla/">LinkedIn</a> | <a href="https://scholar.google.ch/citations?user=GBJAvlYAAAAJ&hl=en">Scholar</a></h4>
 </center>
+
