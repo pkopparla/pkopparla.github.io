@@ -1,0 +1,5 @@
+#!/bin/sh
+# Rebuild blog pages from posts/*.md and include the results in this commit.
+# Enabled with: git config core.hooksPath .githooks
+python3 build.py || exit 1
+git add -A -- index.html blog
