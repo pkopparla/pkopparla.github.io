@@ -11,8 +11,10 @@ Each post starts with a header block, then Markdown:
 
     Post text in Markdown...
 
-posts/cloud-masks.md becomes blog/cloud-masks.html. Add `draft: true` to keep a
-post off the site. An image on its own line with a title,
+posts/cloud-masks.md becomes blog/cloud-masks.html. Keep unfinished posts and
+their images in drafts/, which git ignores, and move them to posts/ and images/
+to publish. Add `draft: true` to keep a post in posts/ off the site, though its
+source is still public once committed. An image on its own line with a title,
 ![alt text](../images/chart.png "Caption"), becomes a figure with that caption. The Writing section on index.html lists every published post,
 newest first, and stays hidden until there is at least one. The "Last updated"
 date in the footer is set to today, so it tracks the latest commit.
@@ -41,6 +43,7 @@ PAGE = """<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
   <title>{title} · Dr. Pushkar Kopparla</title>
   <meta name="description" content="{description}">
   <meta property="og:title" content="{title}">
@@ -54,7 +57,6 @@ PAGE = """<!DOCTYPE html>
 </head>
 <body>
   <main>
-    <p class="home"><a href="../">Dr. Pushkar Kopparla</a></p>
     <article class="post">
       <header>
         <h1>{title}</h1>

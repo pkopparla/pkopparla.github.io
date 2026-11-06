@@ -8,6 +8,8 @@
   /* Sky palette */
   --bg: #d9f0fb; --margin: #c6e7f7; --text: #16364a; --muted: #3f6073; --rule: #b4d9ea;
   --accent: #0b6a9e; --code-bg: #c9e7f5;
+  /* Always bright: "only" also opts out of browsers' automatic dark mode. */
+  color-scheme: only light;
 
   --font-display: "Young Serif", serif;
   --font-body: "Literata", serif;
@@ -18,21 +20,30 @@
 
 html { position: relative; scroll-behavior: smooth; background: var(--margin); }
 
-/* A 40rem text column with a 48px dithered edge on each side. */
 body {
   display: flow-root;
   margin: 0 auto;
   min-height: 100vh;
-  max-width: calc(40rem + 96px);
-  padding: 0 calc(1.25rem + 48px);
-  background:
-    url("images/pixel/edge-left.svg") left top repeat-y,
-    url("images/pixel/edge-right.svg") right top repeat-y,
-    linear-gradient(var(--bg), var(--bg)) center / 40rem 100% no-repeat;
+  max-width: 40rem;
+  padding: 0 1.25rem;
+  background: var(--bg);
   color: var(--text);
   font: 18px/1.6 var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
+
+/* A 48px dithered edge on each side of the column. The SVGs only set the pixel shape, so the
+   colour always matches the column, whatever the theme. */
+html::before, html::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  background: var(--bg);
+}
+html::before { left: calc(50% - 20rem - 48px); mask: url("images/pixel/edge-left.svg") repeat-y; }
+html::after { right: calc(50% - 20rem - 48px); mask: url("images/pixel/edge-right.svg") repeat-y; }
 
 /* Sprite rows fill the margins, anchored to the column so the sprites beside it stay whole. */
 body::before, body::after {
@@ -48,7 +59,7 @@ body::after { right: 0; background: url("images/pixel/sprites.svg") left top; }
 /* Too narrow for margins: one row of sprites above the content and one below it. */
 @media (max-width: 56.25rem) {
   html { background: var(--bg); }
-  body { padding: 0 1.25rem; max-width: 40rem; background: var(--bg); }
+  html::before, html::after { display: none; }
   main { padding-top: 2rem !important; }
   body::before, body::after {
     position: static;
@@ -106,10 +117,6 @@ ul.work, ul.posts, ol.timeline { list-style: none; margin: 0; padding: 0; }
 }
 
 /* Posts */
-
-.home { margin: 0; }
-.home a { color: var(--text); font-family: var(--font-display); text-decoration: none; }
-.home a:hover { color: var(--accent); }
 
 .post header { margin: 2rem 0; }
 .post h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
