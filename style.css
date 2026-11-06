@@ -5,9 +5,9 @@
  */
 
 :root {
-  /* Canopy palette */
-  --bg: #e8eddc; --text: #1f2a1d; --muted: #4b5945; --rule: #cbd4ba;
-  --accent: #2f6b3a; --code-bg: #dde4cf;
+  /* Sky palette */
+  --bg: #d9f0fb; --margin: #c6e7f7; --text: #16364a; --muted: #3f6073; --rule: #b4d9ea;
+  --accent: #0b6a9e; --code-bg: #c9e7f5;
 
   --font-display: "Young Serif", serif;
   --font-body: "Literata", serif;
@@ -16,16 +16,51 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
-html { scroll-behavior: smooth; }
+html { position: relative; scroll-behavior: smooth; background: var(--margin); }
 
+/* A 40rem text column with a 48px dithered edge on each side. */
 body {
+  display: flow-root;
   margin: 0 auto;
-  max-width: 40rem;
-  padding: 0 1.25rem;
-  background: var(--bg);
+  min-height: 100vh;
+  max-width: calc(40rem + 96px);
+  padding: 0 calc(1.25rem + 48px);
+  background:
+    url("images/pixel/edge-left.svg") left top repeat-y,
+    url("images/pixel/edge-right.svg") right top repeat-y,
+    linear-gradient(var(--bg), var(--bg)) center / 40rem 100% no-repeat;
   color: var(--text);
   font: 18px/1.6 var(--font-body);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Sprite rows fill the margins, anchored to the column so the sprites beside it stay whole. */
+body::before, body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(50% - 20rem - 48px);
+}
+body::before { left: 0; background: url("images/pixel/sprites.svg") right top; }
+body::after { right: 0; background: url("images/pixel/sprites.svg") left top; }
+
+/* Too narrow for margins: one row of sprites above the content and one below it. */
+@media (max-width: 56.25rem) {
+  html { background: var(--bg); }
+  body { padding: 0 1.25rem; max-width: 40rem; background: var(--bg); }
+  main { padding-top: 2rem !important; }
+  body::before, body::after {
+    position: static;
+    display: block;
+    width: auto;
+    height: 88px;
+    margin: 0 -1.25rem;
+    background-position: center top;
+    background-repeat: space no-repeat;
+  }
+  body::before { background-image: url("images/pixel/band-sky.svg"); }
+  body::after { background-image: url("images/pixel/band-ground.svg"); }
 }
 
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
@@ -81,6 +116,8 @@ ul.work, ul.posts, ol.timeline { list-style: none; margin: 0; padding: 0; }
 .post-body h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; }
 .post-body h3 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
 .post-body img { max-width: 100%; height: auto; border-radius: 4px; }
+.post-body figure { margin: 2rem 0; }
+.post-body figcaption { color: var(--muted); font-size: 0.9rem; text-align: center; margin-top: 0.5rem; }
 .post-body blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--muted); }
 .post-body code { background: var(--code-bg); padding: 0.1em 0.3em; border-radius: 3px; font-size: 0.9em; }
 .post-body pre { background: var(--code-bg); padding: 1rem; border-radius: 6px; overflow-x: auto; line-height: 1.45; }

@@ -12,7 +12,8 @@ Each post starts with a header block, then Markdown:
     Post text in Markdown...
 
 posts/cloud-masks.md becomes blog/cloud-masks.html. Add `draft: true` to keep a
-post off the site. The Writing section on index.html lists every published post,
+post off the site. An image on its own line with a title,
+![alt text](../images/chart.png "Caption"), becomes a figure with that caption. The Writing section on index.html lists every published post,
 newest first, and stays hidden until there is at least one. The "Last updated"
 date in the footer is set to today, so it tracks the latest commit.
 """
@@ -40,7 +41,7 @@ PAGE = """<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{title} · Pushkar Kopparla</title>
+  <title>{title} · Dr. Pushkar Kopparla</title>
   <meta name="description" content="{description}">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
@@ -53,7 +54,7 @@ PAGE = """<!DOCTYPE html>
 </head>
 <body>
   <main>
-    <p class="home"><a href="../">Pushkar Kopparla</a></p>
+    <p class="home"><a href="../">Dr. Pushkar Kopparla</a></p>
     <article class="post">
       <header>
         <h1>{title}</h1>
@@ -104,6 +105,10 @@ def main():
 
     for p in posts:
         body = markdown.markdown(p["body"], extensions=["fenced_code", "tables", "footnotes"])
+        # An image on its own line with a title, ![alt](src "Caption"), becomes a captioned figure.
+        # The title moves into the caption so it doesn't also pop up as a hover tooltip.
+        body = re.sub(r'<p><img ([^>]*?) title="([^"]*)"([^>]*?)/></p>',
+                      lambda m: f"<figure><img {m.group(1)}{m.group(3)}/><figcaption>{m.group(2)}</figcaption></figure>", body)
         (BLOG / f"{p['slug']}.html").write_text(PAGE.format(
             title=html.escape(p["title"]),
             description=html.escape(p.get("description", p["title"])),
