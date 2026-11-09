@@ -32,8 +32,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* A 48px dithered edge on each side of the column. The SVGs only set the pixel shape, so the
-   colour always matches the column, whatever the theme. */
+/* A 48px strip of column colour on each side, so the sprites keep clear of the text. */
 html::before, html::after {
   content: "";
   position: absolute;
@@ -42,19 +41,21 @@ html::before, html::after {
   width: 48px;
   background: var(--bg);
 }
-html::before { left: calc(50% - 20rem - 48px); mask: url("images/pixel/edge-left.svg") repeat-y; }
-html::after { right: calc(50% - 20rem - 48px); mask: url("images/pixel/edge-right.svg") repeat-y; }
+html::before { left: calc(50% - 20rem - 48px); }
+html::after { right: calc(50% - 20rem - 48px); }
 
-/* Sprite rows fill the margins, anchored to the column so the sprites beside it stay whole. */
+/* Sprite rows fill the margins, anchored to the column so the sprites beside it stay whole.
+   The PNGs are drawn at 2x, so they're shown at half size to stay sharp on dense screens. */
 body::before, body::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   width: calc(50% - 20rem - 48px);
+  background-size: 672px 384px;
 }
-body::before { left: 0; background: url("images/pixel/sprites.svg") right top; }
-body::after { right: 0; background: url("images/pixel/sprites.svg") left top; }
+body::before { left: 0; background-image: url("images/sprites/rows.png"); background-position: right top; }
+body::after { right: 0; background-image: url("images/sprites/rows.png"); background-position: left top; }
 
 /* Too narrow for margins: one row of sprites above the content and one below it. */
 @media (max-width: 56.25rem) {
@@ -69,9 +70,10 @@ body::after { right: 0; background: url("images/pixel/sprites.svg") left top; }
     margin: 0 -1.25rem;
     background-position: center top;
     background-repeat: space no-repeat;
+    background-size: auto 88px;
   }
-  body::before { background-image: url("images/pixel/band-sky.svg"); }
-  body::after { background-image: url("images/pixel/band-ground.svg"); }
+  body::before { background-image: url("images/sprites/band-top.png"); }
+  body::after { background-image: url("images/sprites/band-bottom.png"); }
 }
 
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
