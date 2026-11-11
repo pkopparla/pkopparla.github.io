@@ -54,6 +54,7 @@ PAGE = """<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="{fonts}">
   <link rel="stylesheet" href="../style.css">
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "dd944496cf524091b9f0bc1d4c2ea902"}}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
   <main>
