@@ -14,7 +14,9 @@ Each post starts with a header block, then Markdown:
 posts/cloud-masks.md becomes blog/cloud-masks.html. Keep unfinished posts and
 their images in drafts/, which git ignores, and move them to posts/ and images/
 to publish. Add `draft: true` to keep a post in posts/ off the site, though its
-source is still public once committed. An image on its own line with a title,
+source is still public once committed. For a post first published elsewhere,
+add `original_url:` and `original_site:` (e.g. Solafune blog) to show a
+"First published on..." line under the title. An image on its own line with a title,
 ![alt text](../images/chart.png "Caption"), becomes a figure with that caption. The Writing section on index.html lists every published post,
 newest first, and stays hidden until there is at least one. The "Last updated"
 date in the footer is set to today, so it tracks the latest commit.
@@ -61,7 +63,7 @@ PAGE = """<!DOCTYPE html>
     <article class="post">
       <header>
         <h1>{title}</h1>
-        <time datetime="{iso}">{long_date}</time>
+        <time datetime="{iso}">{long_date}</time>{repost}
       </header>
       <div class="post-body">
 {body}
@@ -112,12 +114,18 @@ def main():
         # The title moves into the caption so it doesn't also pop up as a hover tooltip.
         body = re.sub(r'<p><img ([^>]*?) title="([^"]*)"([^>]*?)/></p>',
                       lambda m: f"<figure><img {m.group(1)}{m.group(3)}/><figcaption>{m.group(2)}</figcaption></figure>", body)
+        repost = ""
+        if "original_url" in p:
+            repost = (f'\n        <p class="repost">First published on the '
+                      f'<a href="{html.escape(p["original_url"])}">{html.escape(p.get("original_site", "original site"))}</a> '
+                      f'and reposted here.</p>')
         (BLOG / f"{p['slug']}.html").write_text(PAGE.format(
             title=html.escape(p["title"]),
             description=html.escape(p.get("description", p["title"])),
             fonts=FONTS,
             iso=p["date"].isoformat(),
             long_date=f"{p['date'].day} {p['date']:%B %Y}",
+            repost=repost,
             body=body,
         ), encoding="utf-8")
 
